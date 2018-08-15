@@ -7,9 +7,9 @@ import { Provider } from 'react-redux';
 
 import store from './store';
 import Welcome from './Welcome';
-import Vote from './Vote';
 
 // TODO: Render the `Vote` component instead of the `Welcome` one
+import Vote from './Vote';
 
 render(
   <Provider store={store}>

@@ -17,6 +17,8 @@ npm start
 
 ## Proceeding with your solution
 - Look at the result [here](http://workshop.alexrieux.fr)
+- The entry point of the application is the index file `src/index.js`
+
 - Search for `TODO: ` in the app to get some hint on how to proceed
 
 - Basically you need to fetch the data from the [todo api](http://workshop.lastmilelink.technology:8080/) add them to the redux store and display the results using [react victory](http://formidable.com/open-source/victory/docs/victory-bar)
