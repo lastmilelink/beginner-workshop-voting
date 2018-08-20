@@ -1,19 +1,18 @@
-import 'sanitize.css/sanitize.css';
-import './css/main.css';
+import "sanitize.css/sanitize.css";
+import "./css/main.css";
 
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
+import React from "react";
+import { render } from "react-dom";
+import { Provider } from "react-redux";
 
-import store from './store';
-import Welcome from './Welcome';
+import store from "./store";
+import Welcome from "./Welcome";
 
-// TODO: Render the `Vote` component instead of the `Welcome` one
-import Vote from './Vote';
+// TODO: Import & Render the `Vote` component instead of the `Welcome` one
 
 render(
   <Provider store={store}>
     <Welcome />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

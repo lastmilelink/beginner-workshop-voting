@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 
-import { getPoll, addVote } from './actions/poll';
+import { getPoll, addVote } from "./actions/poll";
 
-import Container from './components/Container';
-import Title from './components/Title';
-import BarChart from './components/BarChart';
-import Voting from './components/Voting';
+import Container from "./components/Container";
+import Title from "./components/Title";
+import BarChart from "./components/BarChart";
+import Voting from "./components/Voting";
 
 class App extends Component {
   // TODO: Add `onClick` handler
-  // TODO: Execute `getPoll` on mount
+  // TODO: Execute `getPoll` on component mount, google "React Component Lifecycle"
 
   render() {
     const { poll } = this.props;
@@ -23,16 +23,11 @@ class App extends Component {
 
     return (
       <Container>
-        <Title>
-          {poll.title}
-        </Title>
+        <Title>{poll.title}</Title>
 
-        <BarChart answers={poll.answer}/>
+        <BarChart answers={poll.answer} />
 
-        <Voting
-          answers={poll.answer}
-          onClick={undefined}
-        />
+        <Voting answers={poll.answer} onClick={undefined} />
       </Container>
     );
   }
@@ -40,12 +35,16 @@ class App extends Component {
 
 const mapStateToProps = state => ({
   // TODO: Add `poll` from `state`
-})
+});
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  // TODO: Add `getPoll` action creator
-  // TODO: Add `addVote` action creator
-}, dispatch)
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    {
+      // TODO: Add `getPoll` action creator
+      // TODO: Add `addVote` action creator
+    },
+    dispatch
+  );
 
 export default connect(
   mapStateToProps,
